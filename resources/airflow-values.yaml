@@ -1305,7 +1305,7 @@ dags:
   gitSync:
     ## if the git-sync sidecar container is enabled
     ##
-    enabled: false
+    enabled: true
 
     ## the git-sync container image
     ##
@@ -1332,7 +1332,7 @@ dags:
     ##   # ssh git repo
     ##   repo: "git@github.com:USERNAME/REPOSITORY.git"
     ##
-    repo: ""
+    repo: "git@github.com:mjakkampudi/airflow-dags.git"
 
     ## the sub-path within your repo where dags are located
     ## - only dags under this path within your repo will be seen by airflow,
@@ -1342,7 +1342,7 @@ dags:
 
     ## the git branch to check out
     ##
-    branch: master
+    branch: main
 
     ## the git revision (tag or hash) to check out
     ##
@@ -1362,19 +1362,19 @@ dags:
 
     ## the name of a pre-created Secret with git http credentials
     ##
-    httpSecret: ""
+    #httpSecret: ""
 
     ## the key in `dags.gitSync.httpSecret` with your git username
     ##
-    httpSecretUsernameKey: username
+    #httpSecretUsernameKey: username
 
     ## the key in `dags.gitSync.httpSecret` with your git password/token
     ##
-    httpSecretPasswordKey: password
+    #httpSecretPasswordKey: password
 
     ## the name of a pre-created Secret with git ssh credentials
     ##
-    sshSecret: ""
+    sshSecret: "airflow-ssh-git-secret"
 
     ## the key in `dags.gitSync.sshSecret` with your ssh-key file
     ##
@@ -1394,7 +1394,7 @@ dags:
     ##  - the first sync must succeed
     ##  - a value of -1 will retry forever after the initial sync
     ##
-    maxFailures: 0
+    #maxFailures: 0
 
 ###################################
 ## CONFIG | Kubernetes Ingress
