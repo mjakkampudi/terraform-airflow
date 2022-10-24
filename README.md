@@ -56,6 +56,6 @@ Once you have updated everything according to the instructions here and within t
  - Check if plan looks good: ___terraform plan___
  - Apply changes: ***terraform apply -auto-approve***
  - Check if your airflow web service has been created: ***kubectl get svc***
- - Enable port forwarding for airflow web service: ***k port-forward svc/airflow-helm-web 8080:8080***
+ - Enable port forwarding for airflow web service: ***kubectl port-forward svc/airflow-helm-web 8080:8080***
   
 
