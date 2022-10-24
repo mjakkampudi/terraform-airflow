@@ -1,8 +1,6 @@
 # Fully Automated Airflow Deployment on GKE using HELM
 
-
 ## Getting Started
-
 I have run this code using a MacBook.
 Follow these instructions to copy the code to your local machine.
 - Clone this repo
