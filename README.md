@@ -22,8 +22,8 @@ I have run this code using a MacBook.
 - Install google cloud SDK: ___brew install --cask google-cloud-sdk___
 - Install google cloud auth plugin: 
   - ___gcloud components install gke-gcloud-auth-plugin___ 
-  - ___gcloud init
-  - ___gcloud auth application-default login
+  - ___gcloud init___
+  - ___gcloud auth application-default login___
 - Get kubernetes context and start using it on local machine: ___gcloud container clusters get-credentials (\$(terraform output -raw kubernetes_cluster_name) --region \$(terraform output -raw region))___
 - If you want to visualise your Kubernetes clusters on your local machine you can install lens: ___brew install --cask lens___
 - I have enabled GitSync to my private repo for DAG synchronization, if you dont want it you can simply set ___enable: false.___
