@@ -1,4 +1,4 @@
-# Fully Automated Airflow Deployment on GKE using HELM and Terraform
+# Airflow Deployment on GKE using HELM and Terraform
 
 ## Getting Started
 I have run this code using a MacBook.
