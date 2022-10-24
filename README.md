@@ -27,7 +27,7 @@ I have run this code using a MacBook.
 - Get kubernetes context and start using it on local machine: ___gcloud container clusters get-credentials (\$(terraform output -raw kubernetes_cluster_name) --region \$(terraform output -raw region))___
 - If you want to visualise your Kubernetes clusters on your local machine you can install lens: ___brew install --cask lens___
 - I have enabled GitSync to my private repo for DAG synchronization, if you dont want it you can simply set [___enable: false.___](https://github.com/mjakkampudi/terraform-airflow/blob/1af48fb6732b1ca14d40b8ea1793185a355fced9/resources/airflow-values.yaml#L1308)
-- If you wish to enable GitSync as well, follow further instructions below to customize the ___helm chart___ using ___values.yaml.___
+- If you wish to enable GitSync, follow further instructions below to customize the ___helm chart___ using ___values.yaml.___
 
 ### Instructions to enable GitSync:
 - Create private git repo
