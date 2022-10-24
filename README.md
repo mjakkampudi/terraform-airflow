@@ -2,11 +2,11 @@
 
 ## Getting Started
 I have run this code using a MacBook.
-Follow these instructions to copy the code to your local machine.
 - Clone this repo
 - Install the prerequisites
-- Check http://localhost:8080. 
-- You should be able to login to airflow using the credentials provided in the code.
+- Follow the instructions mentioned below
+- Check http://localhost:8080 
+- You should be able to login to airflow using the credentials provided in the code (default username & password: admin, admin)
 
 ### Prerequisites
 - Create GCP account
