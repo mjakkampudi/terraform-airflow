@@ -1,13 +1,12 @@
-# Fully Automated Airflow Deployment on GKE using HELM
+# Fully Automated Airflow Deployment on GKE using HELM and Terraform
 
 ## Getting Started
 I have run this code using a MacBook.
 Follow these instructions to copy the code to your local machine.
 - Clone this repo
 - Install the prerequisites
-- Follow the Instructions
-- Run the service
-- Check http://localhost:8080
+- Check http://localhost:8080. 
+- You should be able to login to airflow using the credentials provided in the code.
 
 ### Prerequisites
 - Create GCP account
