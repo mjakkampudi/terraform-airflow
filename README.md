@@ -55,5 +55,7 @@ I have run this code using a MacBook.
   - Initialize terraform: ___terraform init___
   - Check if plan looks good: ___terraform plan___
   - Apply changes: ***terraform apply -auto-approve***
+  - Check if your airflow web service has been created: ***kubectl get svc***
+  - Enable port forwarding for airflow web service: ***k port-forward svc/airflow-helm-web 8080:8080***
   
 
