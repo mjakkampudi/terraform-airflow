@@ -1331,7 +1331,7 @@ dags:
     ## ____ EXAMPLE _______________
     ##   # ssh git repo
     ##   repo: "git@github.com:USERNAME/REPOSITORY.git"
-    ##
+    ## update as needed
     repo: "git@github.com:mjakkampudi/airflow-dags.git"
 
     ## the sub-path within your repo where dags are located

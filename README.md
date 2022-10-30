@@ -8,6 +8,10 @@ I have run this code using a MacBook.
 - Check http://localhost:8080 
 - You should be able to login to airflow using the credentials provided in the code (default username & password: admin, admin)
 
+### Infrastructure on GCP
+- Provisioned a GKE cluster and GCS bucket on GCP using Terraform.
+- Deploy Airflow on GKE using Helm chart.
+
 ### Prerequisites
 - Create GCP account
 - Terraform on local machine
@@ -48,7 +52,11 @@ I have run this code using a MacBook.
     - rev: HEAD
     - depth: 1
     - credentialsSecret: git-credentials
-    - sshKeySecret: airflow-git-ssh-secret 
+    - sshKeySecret: airflow-git-ssh-secret
+- To save money when not using GCP resources we can use ***terraform destroy***
+- If we destroy the resources our SSH key also gets destroyed in the process. To avoid manually creating the key 
+everytime we can create a kubernetes secret for the private ssh key via terraform from the specified 
+path. I added the private key file to my local repo but omitted it from the remote repo by adding it to .gitignore following best practices.
 
 ### Final Steps
 Once you have updated everything according to the instructions here and within the code you can use the commands below:

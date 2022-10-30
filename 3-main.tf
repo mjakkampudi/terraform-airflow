@@ -63,6 +63,17 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 }
 
+resource "kubernetes_secret" "airflow-ssh-git-secret" {
+  metadata {
+    name = "airflow-ssh-git-secret"
+  }
+  data = {
+    "id_rsa" = "${file("${path.module}/airflowsshkey")}"
+  }
+  type = "Opaque"
+}
+
+
 resource "helm_release" "airflow" {
   name  = "airflow-helm"
   repository = "https://airflow-helm.github.io/charts"
@@ -72,4 +83,12 @@ resource "helm_release" "airflow" {
 
   values = [
   "${file("resources/airflow-values.yaml")}"]
+}
+
+resource "google_storage_bucket" "first" {
+
+  name = var.bucket_name
+  storage_class = var.storage_class
+  location = var.region
+
 }

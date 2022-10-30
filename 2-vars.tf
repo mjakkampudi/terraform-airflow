@@ -20,3 +20,11 @@ variable "gke_num_nodes" {
   default     = 2
   description = "number of gke nodes"
 }
+
+variable "bucket_name" {
+  description = "The name of our bucket"
+}
+
+variable "storage_class" {
+  description = "The storage class"
+}
